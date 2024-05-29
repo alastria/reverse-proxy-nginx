@@ -18,6 +18,7 @@ git clone https://github.com/alastria/reverse-proxy-nginx
 ```
 
 Once you have cloned the repository, you will want to edit and configure the `nginx.conf` file provided.  
+Please note to edit line 57 to point to the correct IP and Port for your node, or this will not work.
 By default, this nginx server will run only through HTTP, so if you want to use HTTPS, you will have to either set it up through infrastructure (for example an AWS Application Load Balancer), or directly from Nginx (by getting a valid SSL Certificate and importing it in Nginx.  
 [Here's instructions to import a SSL Certificate in Nginx.](http://nginx.org/en/docs/http/configuring_https_servers.html))  
 You can generate an SSL Certificate with Certbot, or purchase one from a Certificate Authority (CA).  
@@ -36,6 +37,8 @@ You will then be able to call the IP or domain name of the reverse proxy as you 
 
 To get started, you will want to download `nginx.conf` from this repository.  
 
+Once you have downloaded the `nginx.conf` file, you will want to edit it to configure the service.  
+Please note to edit line 57 to point to the correct IP and Port for your node, or this will not work.
 By default, this `nginx.conf` will make it so that the Nginx server only accepts HTTP requests, so if you want to use HTTPS, you will have to either set it up through infrastructure (for example an AWS Application Load Balancer), or directly from Nginx (by getting a valid SSL Certificate and importing it in Nginx.  
 [Here's instructions to import a SSL Certificate in Nginx.](http://nginx.org/en/docs/http/configuring_https_servers.html))  
 You can generate an SSL Certificate with Certbot, or purchase one from a Certificate Authority (CA).  
