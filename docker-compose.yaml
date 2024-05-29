@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  nginx:
+    container_name: nginx.reverse-proxy
+    image: nginx:1.26-alpine # Version 1.26-alpine of nginx on docker. Change version as necessary. Beware of config changes between versions.
+    ports:
+      - 80:80   # HTTP Port mapping
+      - 443:443 # HTTPS Port mapping
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # Replace the image's default nginx.conf with the one we configured here.
+    restart: always # Always restart the container if it stops
